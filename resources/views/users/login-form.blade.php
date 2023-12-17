@@ -8,14 +8,18 @@
             <label for="email">Email address</label>
             <input type="email" class="form-control w-50" id="email" name="email" value="{{ old('email') }}">
             @error('email')
-                <p>{{ $message }}</p>
+                <p class="text-danger">
+                    <small> {{ $message }} </small>
+                </p>
             @enderror
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control w-50" id="password" name="password">
             @error('password')
-                <p>{{ $message }}</p>
+                <p class="text-danger">
+                    <small> {{ $message }} </small>
+                </p>
             @enderror
         </div>
         <button type="submit" class="btn btn-dark">Login</button>

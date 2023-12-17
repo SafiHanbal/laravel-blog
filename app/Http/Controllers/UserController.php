@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function signUp(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name' => 'required|min:3',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|required_with:confirm-password',
